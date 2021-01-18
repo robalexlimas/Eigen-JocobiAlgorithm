@@ -14,8 +14,8 @@ they transform a matrix A into matrix whose main diagonal is formed by the eigen
 
 For example in 3x3 matrix
 
-                |A1 0   0|
-P * A * P^(t) = |0  A2  0|
+                |A1 0   0 |
+P * A * P^(t) = |0  A2  0 |
                 |0  0   A3|
 
 Where:
@@ -71,7 +71,7 @@ def eigen(matrix, iterations=20):
 
         # Calculating values x, y, z, sin and cos
         y = matrix[arg_max_row, arg_max_row] - matrix[arg_max_column, arg_max_column]
-        if np.absolute(y) < 0:
+        if np.absolute(y) == 0:
             # if |y| < 0 then cos(theta) and sin (theta) are equals, so theta is pi / 4
             cos, sin = np.sin(np.pi / 4), np.sin(np.pi / 4)
         else:
