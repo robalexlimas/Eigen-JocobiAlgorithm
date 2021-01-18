@@ -72,7 +72,7 @@ def eigen(matrix, iterations=20):
         # Calculating values x, y, z, sin and cos
         y = matrix[arg_max_row, arg_max_row] - matrix[arg_max_column, arg_max_column]
         if np.absolute(y) == 0:
-            # if |y| < 0 then cos(theta) and sin (theta) are equals, so theta is pi / 4
+            # if |y| -> 0 then cos(theta) and sin (theta) are equals, so theta is pi / 4
             cos, sin = np.sin(np.pi / 4), np.sin(np.pi / 4)
         else:
             x = 2 * matrix[arg_max_row, arg_max_column]
